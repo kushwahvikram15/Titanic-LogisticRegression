@@ -1,4 +1,5 @@
 # Stock Market Analysis
+Stock market analysis is a widely studied problem as it offers practical applications for signal processing and predictive methods and a tangible financial reward. Creating a system that yields consistent returns is extremely challenging and is currently an open problem as stock market prices are extremely volatile and vary widely both within a given stock and comparatively amongst many stocks. Further, stock market data is influenced by a large number of factors including foreign and domestic economies, trade agreements, wars. 
 
 ## Preconditions:
 
@@ -21,7 +22,6 @@ uvicorn app.main:app --reload
 
 To run the web application in debug use::
 
-    alembic upgrade head
     uvicorn app.main:app --reload
 
 
@@ -35,7 +35,7 @@ All routes are available on ``/docs`` or ``/redoc`` paths with Swagger or ReDoc.
 Project structure
 -----------------
 
-Files related to application are in the ``app`` or ``tests`` directories.
+Files related to application are in the ``app``  directories.
 Application parts are:
 
 
