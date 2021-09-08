@@ -40,20 +40,24 @@ Application parts are:
 
 
     app
-    ├─── repository      - all crud stuff.
-    │   ├── stocks       - stocks related crud operation.
-    │   ├── user         - stocks related crud operation.
+    ├─── repository           - all crud stuff.
+    │   ├── stocks.py         - stocks related crud operation.
+    │   ├── user.py           - stocks related crud operation.
     │
-    ├── core             - application configuration, startup events, logging.
-    ├── db               - db related stuff.
-    │   ├── migrations   - manually written alembic migrations.
-    │   └── repositories - all crud stuff.
-    ├── models           - pydantic models for this application.
-    │   ├── domain       - main models that are used almost everywhere.
-    │   └── schemas      - schemas for using in web routes.
-    ├── resources        - strings that are used in web responses.
-    ├── services         - logic that is not just crud related.
-    └── main.py          - FastAPI application creation and configuration.
+    ├── routers               - web routes.
+    │   ├── __init__.py       
+    │   └── authentication.py - all crud stuff.
+    │   └── stocks.py         
+    │   └── user.py
+    │
+    ├── __init__.py
+    ├── database.py           - database connection related stuff.
+    ├── hashing.py            - convert plain password into hash password.
+    ├── models.py             - pydantic models for this application.
+    ├── oauth2.py             - jwt token generation
+    ├── schemas.py            - schemas for using in web routes.
+    ├── token.py              - token generation and token verification.
+    └── main.py               - FastAPI application creation and configuration.
 
 
 
